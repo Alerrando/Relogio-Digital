@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2? família=Glory:ital@1&display=swap');
+
+
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(31, 31, 31);
+}
+
+.wrapper{
+    height: 10em;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper p{
+    border: 2px solid black;
+    box-shadow: -3px -3px 7px rgba(255,255,255,0.05),
+                3px 3px 5px rgba(0,0,0,0.5);
+    padding: 20px;
+    margin: 0;
+    font-family: "Glory";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 255, 234);
+    font-size: 3rem;
+}
