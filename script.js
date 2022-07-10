@@ -22,7 +22,7 @@ window.onload = function(){
     function startTimer(){
         segundos++;
 
-        if(horas == 0)
+        if(horas == 00 || horas == 0)
         {
             horas = "00";
             $horas.innerHTML = horas;
