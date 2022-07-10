@@ -5,29 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Glory:wght@300&display=swap" rel="stylesheet">
     <title>Relógio Digital</title>
-    <script src="script.js" defer>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                colorPrincipal: 'rgb(0, 255, 234)',
-                'colorDark': 'rgb(31, 31, 31)',
-              }
-            },
-            fontFamily: {
-                'glory': ["Glory", "sans-serif"]
-            }
-          }
-        }
-    </script>
+    <script src="script.js" defer></script>
 </head>
-<body class="bg-colorDark">
+<body>
     <div class="flex h-screen items-center justify-center">
-        <div class="h-20 w-80 flex gap-2 items-center justify-center text-5xl text-colorPrincipal font-glory border-2 border-solid border-black shadow-xl shadow-black">
+        <div class="h-20 w-80 flex gap-2 items-center justify-center text-5xl text-[#00FFEA] border-2 border-solid border-black shadow-xl shadow-black">
             <span id="hora">00</span>
             :<span id="minutos">00</span>
             :<span id="segundos">00</span> <span id="AMPM"></span>
