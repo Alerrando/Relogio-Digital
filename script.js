@@ -24,8 +24,18 @@ window.onload = function(){
 
         if(horas == 0)
         {
-            horas = (horas - 12) + "";
+            horas = "00";
             $horas.innerHTML = horas;
+        }
+
+        if(horas < 9)
+        {
+            $horas.innerHTML = "0" + horas;
+        }
+
+        if(minutos < 9)
+        {
+            $minutos.innerHTML = "0" + minutos;
         }
 
         if(minutos > 60)
@@ -42,7 +52,7 @@ window.onload = function(){
         if(segundos > 9)
             $segundos.innerHTML = segundos;
 
-        if(segundos > 99)
+        if(segundos > 60)
         {
             segundos = "00";
             minutos++;
