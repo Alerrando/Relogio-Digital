@@ -1,19 +1,16 @@
 window.onload = function(){
-    data = new Date();
-    var horas=00, minutos=00, segundos=00;
-    var $horas = document.getElementById("hora");
-    var $minutos = document.getElementById("minutos");
-    var $segundos = document.getElementById("segundos");
-    var $AMPM = document.getElementById("AMPM");
+    let data = new Date();
+    let horas=00, minutos=00, segundos=00;
+    let $horas = document.getElementById("hora");
+    let $minutos = document.getElementById("minutos");
+    let $segundos = document.getElementById("segundos");
+    let $AMPM = document.getElementById("AMPM");
 
     horas = data.getHours();
     minutos = data.getMinutes();
     segundos = data.getSeconds();
 
-    if(horas >= 12)
-        $AMPM.innerHTML = "PM";
-    else
-        $AMPM.innerHTML = "AM";
+    horas >= 12 ? $AMPM.innerHTML = "PM" : $AMPM.innerHTML = "AM";
 
     $horas.innerHTML = horas;
     $minutos.innerHTML = minutos;
@@ -21,22 +18,22 @@ window.onload = function(){
 
     function startTimer(){
         segundos++;
+        horasTime();
+        minutosTime();
+        segundosTime()
+    }
 
+    function horasTime(){
         if(horas == 00 || horas == 0)
         {
             horas = "00";
             $horas.innerHTML = horas;
         }
+        else if(horas < 9) {$horas.innerHTML = "0" + horas};
+    }
 
-        if(horas < 9)
-        {
-            $horas.innerHTML = "0" + horas;
-        }
-
-        if(minutos < 9)
-        {
-            $minutos.innerHTML = "0" + minutos;
-        }
+    function minutosTime(){
+        if(minutos < 9) {$minutos.innerHTML = "0" + minutos};
 
         if(minutos > 60)
         {
@@ -45,25 +42,22 @@ window.onload = function(){
             horas++;
             $horas.innerHTML = "0" + horas;
         }
+    }
 
-        if(segundos <= 9)
-            $segundos.innerHTML = "0" + segundos;
+    function segundosTime(){
+        if(segundos <= 9){$segundos.innerHTML = "0" + segundos};
 
-        if(segundos > 9)
-            $segundos.innerHTML = segundos;
+        if(segundos > 9){$segundos.innerHTML = segundos};
 
         if(segundos > 60)
         {
             segundos = "00";
             minutos++;
-            if(minutos <= 9)
-                $minutos.innerHTML = "0" + minutos;
-            else
-                $minutos.innerHTML = minutos;
+
+            minutos <= 9 ? $minutos.innerHTML = "0" + minutos : $minutos.innerHTML = minutos;
 
             $segundos.innerHTML = segundos;
         }
-
     }
 
     setInterval(startTimer, 1000);
