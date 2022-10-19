@@ -1,13 +1,17 @@
 <h1 align="center">
-    <img src="https://www.svgrepo.com/show/355037/google.svg" width="150">
+    <img src="./github/favicon.ico" width="150">
     </br>
     </br>
     Relógio Digital
 </h1>
 
-<p align="center">Projeto de um Relógido digital, feito com Html, Tailwind CSS e Javascript</p>
+<p align="center">Projeto de um Relógido digital, feito com Html, CSS e Javascript</p>
 
 ## 🖥️ Demo
+
+<div align="center">
+    <img src="./github/RelógioDigital.gif" />
+</div>
 
 </br>
 <hr />

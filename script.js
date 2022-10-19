@@ -33,9 +33,9 @@ window.onload = function(){
     }
 
     function minutosTime(){
-        if(minutos < 9) {$minutos.innerHTML = "0" + minutos};
+        if(minutos <= 9) {$minutos.innerHTML = "0" + minutos};
 
-        if(minutos > 60)
+        if(minutos >= 60)
         {
             minutos = "00";
             $minutos.innerHTML = minutos;
